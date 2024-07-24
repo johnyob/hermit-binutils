@@ -12,4 +12,8 @@ case "$target" in
 	LIBPATH_SUFFIX="64/lp64d 64";;
     esac
     ;;
+  riscv64*-hermit*)
+    TEXT_START_ADDR=0x800000
+    SCRIPT_NAME="elf-hermit"
+    ;;
 esac
