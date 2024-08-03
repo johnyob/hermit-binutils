@@ -12,4 +12,8 @@ case "$target" in
 	LIBPATH_SUFFIX="32/ilp32d 32" ;;
     esac
     ;;
+  riscv32*-hermit*)
+    TEXT_START_ADDR=0x800000
+    OUTPUT_FORMAT="elf32-littleriscv-hermit"
+    ;;
 esac

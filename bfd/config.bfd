@@ -1242,6 +1242,11 @@ case "${targ}" in
     ;;
 
 #ifdef BFD64
+  riscv64*-*-hermit*)
+    targ_defvec=riscv_elf64_hermit_vec
+    targ_selvec="riscv_elf64_be_hermit_vec"
+    want64=true
+    ;;
   riscvbe-*-* | riscv32be*-*-*)
     targ_defvec=riscv_elf32_be_vec
     targ_selvecs="riscv_elf32_vec riscv_elf64_vec riscv_elf32_be_vec riscv_elf64_be_vec riscv64_pei_vec"
@@ -1263,12 +1268,6 @@ case "${targ}" in
     want64=true
     ;;
 #endif
-
-  riscv64*-*-hermit*)
-    targ_defvec=riscv_elf64_vec
-    targ_selvec="riscv_elf32_vec riscv_elf64_vec"
-    want64=true
-    ;;
 
   rl78-*-elf)
     targ_defvec=rl78_elf32_vec

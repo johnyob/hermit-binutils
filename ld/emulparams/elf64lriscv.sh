@@ -14,6 +14,8 @@ case "$target" in
     ;;
   riscv64*-hermit*)
     TEXT_START_ADDR=0x800000
-    SCRIPT_NAME="elf-hermit"
+    OUTPUT_FORMAT="elf64-littleriscv-hermit"
+    ENABLE_INITFINI_ARRAY=yes
+    
     ;;
 esac
