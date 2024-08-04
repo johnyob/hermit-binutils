@@ -13,7 +13,7 @@ case "$target" in
     esac
     ;;
   riscv32*-hermit*)
-    TEXT_START_ADDR=0x800000
     OUTPUT_FORMAT="elf32-littleriscv-hermit"
+    ENABLE_INITFINI_ARRAY=yes
     ;;
 esac
